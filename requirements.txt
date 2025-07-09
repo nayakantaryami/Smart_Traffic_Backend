@@ -5,3 +5,5 @@ numpy
 tensorflow
 keras
 scikit-learn
+ultralytics
+python-multipart
