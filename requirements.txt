@@ -3,6 +3,7 @@ uvicorn
 pandas
 numpy
 keras
+tensorflow-cpu
 scikit-learn
 ultralytics
 python-multipart
