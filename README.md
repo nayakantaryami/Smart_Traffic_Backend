@@ -22,6 +22,14 @@ This project has been tested and confirmed working with:
 
 ## Installation
 
+### Option 1: Automated Setup (Recommended)
+```bash
+git clone <repository-url>
+cd Smart_Traffic_Backend
+./setup.sh
+```
+
+### Option 2: Manual Installation
 1. **Clone the repository**:
    ```bash
    git clone <repository-url>
@@ -43,6 +51,34 @@ This project has been tested and confirmed working with:
    ./run.sh
    # Or manually:
    uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+   ```
+
+### Troubleshooting Installation Issues
+
+If you encounter dependency conflicts or TensorFlow installation issues:
+
+1. **Try the stable requirements**:
+   ```bash
+   pip install -r requirements-stable.txt
+   ```
+
+2. **Use environment variables for version control**:
+   ```bash
+   cp .env.example .env
+   # Edit .env file with compatible versions for your environment
+   ```
+
+3. **For Python version compatibility issues**:
+   - Python 3.12: Use `requirements.txt` (latest versions)
+   - Python 3.8-3.11: Use `requirements-stable.txt` (tested stable versions)
+
+4. **Common TensorFlow-CPU issues**:
+   ```bash
+   # If tensorflow-cpu>=2.19.0 fails, try:
+   pip install tensorflow-cpu==2.15.0
+   
+   # For numpy compatibility issues:
+   pip install "numpy>=1.21.0,<2.2.0"
    ```
 
 ## API Endpoints
@@ -91,8 +127,11 @@ The system uses two main components:
 │   ├── morning_time_scaler_independent.pkl  # Input scaler
 │   ├── morning_time_scaler_dependent.pkl    # Output scaler
 │   └── yolov8n.pt          # YOLOv8 weights
-├── requirements.txt         # Python dependencies
+├── requirements.txt         # Python dependencies (latest)
+├── requirements-stable.txt  # Stable dependencies (fallback)
 ├── runtime.txt             # Python version specification
+├── .env.example            # Environment variables template
+├── setup.sh                # Automated setup script
 ├── validate_dependencies.py # Dependency validation script
 └── run.sh                  # Server startup script
 ```
