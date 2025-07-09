@@ -1,0 +1,15 @@
+# Alternative requirements with known stable versions for broader compatibility
+# Use this if requirements.txt fails in your environment
+
+fastapi==0.104.1
+uvicorn==0.24.0
+pandas==2.1.4
+numpy==1.25.2
+keras==2.15.0
+tensorflow-cpu==2.15.0
+scikit-learn==1.3.2
+ultralytics==8.0.196
+python-multipart==0.0.6
+
+# Note: These versions are tested for Python 3.8-3.11 compatibility
+# For the latest versions with Python 3.12, use requirements.txt
