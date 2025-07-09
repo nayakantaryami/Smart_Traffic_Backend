@@ -3,7 +3,7 @@ uvicorn
 pandas
 numpy
 keras
-tensorflow-cpu
+tensorflow-cpu>=2.19.0
 scikit-learn
 ultralytics
 python-multipart
