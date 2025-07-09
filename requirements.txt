@@ -2,7 +2,7 @@ fastapi
 uvicorn
 pandas
 numpy
-tensorflow-cpu
+tensorflow==2.10.1  # Last version to support Python 3.10 officially
 keras
 scikit-learn
 ultralytics
