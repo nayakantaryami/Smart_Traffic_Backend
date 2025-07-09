@@ -19,12 +19,13 @@
 #         }
 
 
-
+import os
 import pandas as pd
 import numpy as np
 import pickle
 from keras.models import load_model
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Disable GPU
 MODEL_PATH = "model/traffic_model.h5"
 IN_SCALER_PATH = "model/morning_time_scaler_independent.pkl"
 OUT_SCALER_PATH = "model/morning_time_scaler_dependent.pkl"
